@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/* LIGHT THEMES */
+
 :root {
   --color-primary:#7380ec;
   --color-danger:#ff7782;
@@ -26,6 +28,18 @@
   --box-shadow: 0 2rem 3rem var(--color-light)
 
 }
+
+
+/* DARK THEMES */
+.dark-theme-variables{
+  --color-background:#181a1e;
+  --color-white:#202528;
+  --color-dark:#edeffd;
+  --color-dark-variant:#a3bdcc;
+  --color-light:rgba(0,0,0,0.4);
+  --box-shadow:0 2rem 3rem var(--color-light);
+}
+
 *{
   margin:0;
   padding:0;
@@ -569,7 +583,7 @@ main .recent-orders a{
   }
   aside{
     position: fixed;
-    left: 0;
+    left: -100%;
     background: var(--color-white);
     width: 18rem;
     z-index: 3;
@@ -577,6 +591,12 @@ main .recent-orders a{
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+  @keyframes showMenu {
+    to{
+      left: 0;
+    }
   }
   aside .logo{
     margin-left: 1rem;
