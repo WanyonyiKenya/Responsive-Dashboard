@@ -517,6 +517,12 @@ main .recent-orders a{
   justify-content: center;
   border-radius: var(--card-border-radius);
 }
+
+.right .sales-analytics .add-product:hover{
+  background: #202528;
+  color: #41f1b6;
+  cursor: pointer;
+}
 .right .sales-analytics .add-product div{
   display: flex;
   align-items: center;
